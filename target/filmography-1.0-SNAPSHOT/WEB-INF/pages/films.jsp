@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    Hello World
+    ${film}
     <h2><a href="/edit">edit page</a> </h2>
 </body>
 </html>
