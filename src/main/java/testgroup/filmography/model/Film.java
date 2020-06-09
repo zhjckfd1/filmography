@@ -23,6 +23,10 @@ public class Film {
         return title;
     }
 
+    public boolean getWatched() {
+        return watched;
+    }
+
     public void setGenre(String genre) {
         this.genre = genre;
     }
