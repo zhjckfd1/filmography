@@ -1,0 +1,8 @@
+testgroup\filmography\controller\FilmController.class
+testgroup\filmography\model\Film.class
+testgroup\filmography\dao\FilmDAOImpl.class
+testgroup\filmography\config\WebConfig.class
+testgroup\filmography\dao\FilmDAO.class
+testgroup\filmography\service\FilmServiceImpl.class
+testgroup\filmography\config\WebInitializer.class
+testgroup\filmography\service\FilmService.class
