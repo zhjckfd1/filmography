@@ -6,11 +6,11 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import javax.servlet.Filter;
 
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{HibernateConfig.class};
     }
-
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class[]{WebConfig.class};

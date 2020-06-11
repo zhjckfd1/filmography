@@ -1,12 +1,31 @@
 package testgroup.filmography.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "films")
 public class Film {
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "year")
     private int year;
+
+    @Column(name = "genre")
     private String genre;
+
+    @Column(name = "watched")
     private boolean watched;
 
+//    @Id
+//    @Column(name = "id")
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -19,11 +38,15 @@ public class Film {
         return genre;
     }
 
+//    @Column(name = "title")
     public String getTitle() {
         return title;
     }
 
-    public boolean getWatched() {
+//    public boolean getWatched() { return watched; }
+
+
+    public boolean isWatched() {
         return watched;
     }
 
@@ -47,14 +70,14 @@ public class Film {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Film{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", year=" + year +
-                ", genre='" + genre + '\'' +
-                ", watched=" + watched +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Film{" +
+//                "id=" + id +
+//                ", title='" + title + '\'' +
+//                ", year=" + year +
+//                ", genre='" + genre + '\'' +
+//                ", watched=" + watched +
+//                '}';
+//    }
 }
