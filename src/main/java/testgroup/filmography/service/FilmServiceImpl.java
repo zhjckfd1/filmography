@@ -4,15 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import testgroup.filmography.dao.FilmDAO;
-import testgroup.filmography.dao.FilmDAOImpl;
 import testgroup.filmography.model.Film;
 import java.util.List;
 
 @Service
 public class FilmServiceImpl implements FilmService {
-
-//    @Autowired
-//    private FilmDAO filmDAO = new FilmDAOImpl();
 
     private FilmDAO filmDAO;
 
@@ -23,8 +19,8 @@ public class FilmServiceImpl implements FilmService {
 
     @Override
     @Transactional
-    public List<Film> allFilms() {
-        return filmDAO.allFilms();
+    public List<Film> allFilms(int page) {
+        return filmDAO.allFilms(page);
     }
 
     @Override
@@ -49,5 +45,11 @@ public class FilmServiceImpl implements FilmService {
     @Transactional
     public Film getById(int id) {
         return filmDAO.getById(id);
+    }
+
+    @Override
+    @Transactional
+    public int filmsCount() {
+        return filmDAO.filmsCount();
     }
 }

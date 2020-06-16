@@ -26,6 +26,7 @@ public class Film {
 //    @Id
 //    @Column(name = "id")
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // лучше на гетеры?
     public int getId() {
         return id;
     }
@@ -42,9 +43,6 @@ public class Film {
     public String getTitle() {
         return title;
     }
-
-//    public boolean getWatched() { return watched; }
-
 
     public boolean isWatched() {
         return watched;
@@ -70,14 +68,4 @@ public class Film {
         this.id = id;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Film{" +
-//                "id=" + id +
-//                ", title='" + title + '\'' +
-//                ", year=" + year +
-//                ", genre='" + genre + '\'' +
-//                ", watched=" + watched +
-//                '}';
-//    }
 }
